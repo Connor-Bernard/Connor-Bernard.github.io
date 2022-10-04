@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope');
+@import url('https://fonts.googleapis.com/css2?family=Inter');
+:root{
+    --material-red: #B04048;
+    --material-green: #167C47;
+    --material-orange:#FF9914;
+    --material-white:#F7F7F0;
+    --material-black:#181716;
+}
+html{
+    margin:0;
+}
+body{
+    margin:0;
+    background-color:red;
+}
+header{
+    position:fixed;
+    width:100%;
+    padding: 8px 110px;
+    background-color:var(--material-white);
+    display:inline-flex;
+    flex-wrap:nowrap;
+    align-items:center;
+    box-shadow:4px 4px 4px rgba(0, 0, 0, 0.45);
+}
+.logo{
+    margin-right:5px;
+    transform:translateY(5px);
+}
+.logoText{
+    font-family:"Manrope";
+    color:var(--material-black);
+    font-weight:1000;
+    font-size:38px;
+}
+.navBar{
+    margin-left: auto;
+    display:flex;
+    gap:30px;
+    flex-direction:row;
+    color:var(--material-black);
+    /*margin-right:15%; /* -- FIXME -- */
+}
+.navItem{
+    font-family:"Manrope";
+    font-size:16px;
+    font-weight:700;
+    padding:5px 20px;
+}
+.menuLink{
+    border:1px solid var(--material-black);
+    border-radius:5px;
+    box-shadow:4px 4px 4px rgba(0, 0, 0, 0.25);
+}
