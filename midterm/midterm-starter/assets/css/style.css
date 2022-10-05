@@ -7,26 +7,59 @@
     --material-white:#F7F7F0;
     --material-black:#181716;
 }
+
+h1, h2, h3{
+    font-family:"Manrope";
+    font-weight:bold;
+    font-size:36px;
+}
+h2{
+    font-size:30px;
+}
+h3{
+    font-size:18px;
+}
+p{
+    font-family:"Inter";
+    font-size:16px;
+    line-height: 143%;
+}
+
 html{
     margin:0;
+    -ms-overflow-style:none;
+    scrollbar-width:none;
+    overflow-x:hidden;
 }
+html::-webkit-scrollbar{
+    display:none;
+}
+
 body{
     margin:0;
-    background-color:red;
 }
+
 header{
     position:fixed;
     width:100%;
-    padding: 8px 110px;
     background-color:var(--material-white);
-    display:inline-flex;
+    display:flex;
+    justify-content: space-between;
     flex-wrap:nowrap;
-    align-items:center;
     box-shadow:4px 4px 4px rgba(0, 0, 0, 0.45);
+    min-height:6.5%;
 }
 .logo{
-    margin-right:5px;
-    transform:translateY(5px);
+    margin-left:7%;
+    align-self:center;
+    display:flex;
+    flex-direction:row;
+    margin-bottom:10px;
+}
+.logoImg{
+    margin-right:10px;
+    align-self:center;
+    transform:translateY(3px);
 }
 .logoText{
     font-family:"Manrope";
@@ -35,12 +68,12 @@ header{
     font-size:38px;
 }
 .navBar{
-    margin-left: auto;
     display:flex;
-    gap:30px;
     flex-direction:row;
+    gap:30px;
+    align-self:center;
     color:var(--material-black);
-    /*margin-right:15%; /* -- FIXME -- */
+    margin-right:7%;
 }
 .navItem{
     font-family:"Manrope";

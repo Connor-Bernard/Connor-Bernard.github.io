@@ -1,0 +1,165 @@
+@import "./style.css";
+
+/* -- SET UP -- */
+
+:root{
+    --landing-text-load-time:600ms;
+    --landing-button-load-delay:var(--landing-text-load-time);
+    --landing-button-load-time:600ms;
+    --header-delay-time:calc(var(--landing-text-load-time) + var(--landing-button-load-time));
+    --header-load-time:800ms;
+}
+
+html{
+    /* TODO: prevent scrolling until animations completed */
+}
+
+header{
+    transform:translateY(-100%);
+    animation-name:headerAnimation;
+    animation-duration:var(--header-load-time);
+    animation-timing-function:ease-in;
+    animation-delay:var(--header-delay-time);
+    animation-fill-mode: forwards;
+}
+
+/* -- INITIAL VIEW ON LOAD -- */
+#landingImgSection{
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+
+#landingImg{
+    height:100vh;
+    width:100vw;
+}
+
+#landingOptions{
+    position:absolute;
+    text-align: center;
+    margin-top:50vh;
+    transform:translateY(-10vh);
+    color: var(--material-white);
+}
+#landingTxt{
+    animation-name:fadeInSlideDown;
+    animation-duration: var(--landing-text-load-time);
+    animation-timing-function: ease-in;
+    line-height:25px;
+}
+#landingButton{
+    border:none;
+    border-radius:10px;
+    background-color:var(--material-orange);
+    padding:10px 14px;
+    color:var(--material-white);
+    font-size:18px;
+    font-family:"Inter";
+    font-weight:bolder;
+    opacity:0;
+    animation-name:fadeInSlideDown;
+    animation-duration:var(--landing-button-load-time);
+    animation-timing-function: ease-in;
+    animation-delay:var(--landing-button-load-delay);
+    animation-fill-mode:forwards;
+}
+#chevron{
+    position:absolute;
+    bottom:25px;
+    transform:scale(1.15);
+    opacity:0;
+    animation-name:fadeIn;
+    animation-duration:var(--header-load-time);
+    animation-timing-function:linear;
+    animation-delay:var(--header-delay-time);
+    animation-fill-mode:forwards;
+
+}
+
+/* -- MENU NODE -- */
+#menuNode{
+    background-color:var(--material-red);
+    /* FIXME: Fix the image from scaling improperly
+     * Probbaly use a media query at 1028px */
+}
+.splitNode{
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    padding:56px 122px;
+    justify-content:space-evenly;
+}
+.splitNodeTextSection{
+    margin-left:30px;
+    background-color:var(--material-black);
+    color:var(--material-white);
+    width:240px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:60px 53px;
+}
+.splitNodeTextSection > h2{
+    line-height:3px;
+}
+.splitNodeTextSection > p{
+    text-align:center;
+    margin-top:40px;
+    margin-bottom:30px;
+}
+.splitNodeTextSection > button{
+    border: 1px solid var(--material-white);
+    border-radius:5px;
+    background-color:var(--material-black);
+    color:var(--material-white);
+    font-family:"Inter";
+    font-weight:bolder;
+    font-size:16px;
+    line-height:0;
+    padding:15px 10px;
+}
+.splitNode > *{
+    box-shadow:4px 4px 4px rgba(0, 0, 0, 0.45);
+    border-radius:5px;
+}
+
+/* -- QUOTE NODE -- */
+#quoteNode{
+    width:100%;
+    background-color:var(--material-white);
+    padding:56px 122px;
+    display:flex;
+    justify-content:space-between;
+}
+
+/* -- ANIMATIONS -- */
+@keyframes fadeInSlideDown{
+    0%{
+        opacity:0;
+        transform:translateY(-8px);
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+@keyframes headerAnimation{
+    0%{
+        box-shadow:none;
+    }
+    100%{
+        transform:none;
+        box-shadow:4px 4px 4px rgba(0, 0, 0, 0.45);
+    }
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}

@@ -3,16 +3,19 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Survey for finding journal prompts built for Emotewell.com" />
+        <meta name="description" content="Gypsy's Website redesign by Connor Bernard" />
         <meta name="author" content="Connor Bernard" />
-        <link rel="stylesheet" href="./assets/css/style.css" />
-
-        <title>Gypsie's</title>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="./assets/css/landing.css" />
+        <title>Gypsy's</title>
     </head>
     <body>
+        <script src="./assets/js/landing.js" type="text/javascript" defer="defer"></script>
         <header>
-            <img class="logo" src="./assets/img/logo.png" alt="logo" height="40px"/>
-            <span class="logoText">Gypsy's</span>
+            <div class="logo">
+                <img class="logoImg" src="./assets/img/logo.png" alt="logo" height="40px"/>
+                <div class="logoText">Gypsy's</div>
+            </div>
             <div class="navBar">
                 <div class="navItem cateringLink">Catering</div>
                 <div class="navItem locationLink">Location</div>
@@ -20,8 +23,44 @@
                 <div class="navItem menuLink">Menu</div>
             </div>
         </header>
-        <div id="landingSection">
-            <img id="landingImage" src="./assets/img/landing.png" alt="picture of pastas" />
+
+        <section id="landingImgSection">
+            <img id="landingImg" src="./assets/img/landing.png" alt="picture of pastas" />
+            <div id="landingOptions">
+                <h1 id="landingTxt">Best of Berkeley</h1>
+                <button id="landingButton">Order Now</button>
+            </div>
+            <img id="chevron" src="./assets/img/chevron.png" />
         </div>
+
+        <section id="menuNode" class="splitNode">
+            <img alt="Photo of pasta" src="./assets/img/tricolore.png" />
+            <div class="splitNodeTextSection">
+                <h2>Our Menu</h2>
+                <img src="./assets/img/redLIne.png" />
+                <p>
+                    Everything is made from scratch in the restaurant on a daily basis, 
+                    including base sauces, stocks, and meatballs.
+                    Prices are low and affordable, ranging from $8.74 to $12.74.
+                </p>
+                <button>View Menu</button>
+            </div>
+        </section>
+
+        <section id="quoteNode">
+            <img alt="yelp logo" src="./assets/img/yelp.png" />
+            <div id="review">
+                <h3>Voted Number 1 Best Italian Food in Berkeley</h3>
+                <img src="./assets/img/redLine.png" />
+                <p>
+                    “One of my favorite restaurants anywhere. Food tastes great.
+                    Prices are low. Portions are huge. The calzones look like
+                    footballs. That's all you need to know from me.”
+
+                    - Peter Alfonsi
+                </p>
+            </div>
+            <img src="./assets/img/snackpass.png" />
+        </section>
     </body>
 </html>
