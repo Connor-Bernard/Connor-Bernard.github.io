@@ -1,12 +1,13 @@
 /* -- SET UP -- */
-@import url('https://fonts.googleapis.com/css2?family=Manrope');
-@import url('https://fonts.googleapis.com/css2?family=Inter');
+@import url("https://fonts.googleapis.com/css2?family=Manrope");
+@import url("https://fonts.googleapis.com/css2?family=Inter");
 :root{
     --material-red: #B04048;
     --material-green: #167C47;
     --material-orange:#FF9914;
     --material-white:#F7F7F0;
     --material-black:#181716;
+    --header-height:65px;
 }
 
 h1, h2, h3{
@@ -20,10 +21,23 @@ h2{
 h3{
     font-size:18px;
 }
-p{
+p, li{
     font-family:"Inter";
     font-size:16px;
     line-height: 143%;
+}
+
+a{
+    text-decoration:none;
+}
+a:hover{
+    cursor:pointer;
+}
+a:active{
+    color:var(--material-orange);
+}
+a:visited{
+    color:var(--material-green);
 }
 
 html{
@@ -48,8 +62,8 @@ header{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow:4px 4px 4px rgba(0, 0, 0, 0.45);
-    min-height:6.5%;
+    box-shadow:0 4px 4px rgba(0, 0, 0, 0.45);
+    height:var(--header-height);
 }
 .logo{
     margin-left:7%;
@@ -58,10 +72,12 @@ header{
     margin-bottom:10px;
 }
 .logoImg{
+    display:inline-block;
     margin-right:10px;
-    transform:translateY(3px);
+    transform:translateY(6px);
 }
 .logoText{
+    display:inline-block;
     font-family:"Manrope";
     color:var(--material-black);
     font-weight:1000;
@@ -74,6 +90,12 @@ header{
     color:var(--material-black);
     margin-right:7%;
 }
+.navBar a{
+    color:var(--material-black);
+}
+.navBar a:visited{
+    color:var(--material-black);
+}
 .navItem{
     font-family:"Manrope";
     font-size:16px;
@@ -81,22 +103,43 @@ header{
     align-self: center;
 }
 .navButton{
+    background-color:var(--material-white);
     border:1px solid var(--material-black);
     border-radius:5px;
     box-shadow:4px 4px 4px rgba(0, 0, 0, 0.25);
     padding:5px 20px;
 }
+.navbutton:active{
+    box-shadow:inset 4px 4px 4px rgb(0 0 0 / 25%);
+}
+.headerOffset{
+    height:var(--header-height);
+}
+
+/* -- PAGE TITLE -- */
+.pageTitle{
+    width:100%;
+    height:5vh;
+    display:flex;
+    align-items:center;
+    background-color:var(--material-white);
+    color:var(--material-black);
+}
+.pageTitle > h3{
+    margin:0 7%;
+}
 
 /* -- FOOTER -- */
 footer{
     width:100%;
-    height:65px;
+    height:100px;
     display:flex;
     flex-direction:row;
     justify-content:space-between;
     padding:15px 30px;
     background-color:var(--material-white);
     color:var(--material-black);
+    box-sizing:border-box;
 }
 .socials{
     display:flex;
@@ -132,4 +175,10 @@ footer{
     gap:3vw;
     font-family:"Inter";
     font-size:16px;
+}
+.footerLinks a{
+    color:var(--material-black);
+}
+.footerLinks a:visited{
+    color:var(--material-black);
 }

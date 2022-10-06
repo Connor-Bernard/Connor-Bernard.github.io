@@ -1,8 +1,4 @@
 @import "./style.css";
-/* TODO
- * [ ] Prevent scrolling until animations completed
- * [ ] Set up media query to prevent weird proportions
- */
 
 /* -- SET UP -- */
 :root{
@@ -11,10 +7,16 @@
     --landing-button-load-time:600ms;
     --header-delay-time:calc(var(--landing-text-load-time) + var(--landing-button-load-time));
     --header-load-time:800ms;
+    --scroll-delay-time:calc(var(--header-delay-time) + var(--header-load-time));
 }
 
 html{
-    /* TODO: prevent scrolling until animations completed */
+    height:100%;
+    overflow-y:hidden;
+    animation-name:stopScrolling;
+    animation-delay:var(--scroll-delay-time);
+    animation-duration:0;
+    animation-fill-mode:forwards;
 }
 
 header{
@@ -110,7 +112,7 @@ header{
     margin-top:40px;
     margin-bottom:30px;
 }
-.splitNodeTextSection > button{
+.splitNodeTextSection button{
     border: 1px solid var(--material-white);
     border-radius:5px;
     background-color:var(--material-black);
@@ -120,6 +122,12 @@ header{
     font-size:16px;
     line-height:0;
     padding:15px 10px;
+}
+.splitNodeTextSection button:hover{
+    cursor:pointer;
+}
+.splitNodeTextSection a{
+    color:var(--material-white);
 }
 .splitNode > *{
     box-shadow:4px 4px 4px rgba(0, 0, 0, 0.45);
@@ -163,7 +171,6 @@ header{
     height:360px;
     overflow:hidden;
 }
-/* TODO: fix the distoriton of the image. */
 #imageNode > img{
     width:100%;
 }
@@ -195,5 +202,14 @@ header{
     }
     100%{
         opacity:1;
+    }
+}
+
+@keyframes stopScrolling {
+    0%{
+        overflow-y:hidden;
+    }
+    100%{
+        overflow-y:auto;
     }
 }
