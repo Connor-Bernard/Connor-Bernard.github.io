@@ -1,0 +1,109 @@
+@import "style.css";
+/* TODO
+ * [ ] Fix the sizing of double lined titled elemnts
+ * [ ] Ensure that background images scale as necessary
+*/
+.menuNode{
+    width:100%;
+    background-repeat:no-repeat !important;
+    background-size:100% !important;
+    background-position:0% 30% !important;
+    background-blend-mode:darken !important;
+    display:flex;
+    flex-direction:column;
+    margin-bottom:50px;
+}
+.menuNode:last-child{
+    margin-bottom:0;
+}
+.protein{
+    margin-top:20px;
+    text-align:center;
+    align-self:center;
+    color:var(--material-white);
+    line-height:0;
+    margin-bottom:20px;
+}
+.menuItems{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+    gap:30px;
+    margin:15px 100px;
+}
+.item{
+    background-color:var(--material-white);
+    opacity:80%;
+    width:250px;
+    height:245px;
+    border:2px solid var(--material-black);
+    border-radius:10px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:5px 25px;
+    position:relative;
+}
+.item p{
+    margin:0;
+}
+.itemHead{
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-self:center;
+    color:var(--material-black);
+    margin-top:5px;
+    font-weight:bold;
+}
+.itemHead > h3{
+    text-align: center;
+    width:120px;
+}
+.itemHead > embed{
+    margin-right: 10px;
+}
+.price{
+    font-family:"Inter";
+    display:flex;
+    flex-direction:row;
+    align-self:center;
+}
+.dollar{
+    font-size:16px;
+}
+.cents{
+    font-size:50%;
+    vertical-align:top;
+}
+.itemDescription{
+    color:var(--material-black);
+    width:80%;
+}
+.modifiers{
+    position:absolute;
+    bottom:0;
+    align-self:flex-start;
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    gap:10px;
+    margin:20px 10px;
+}
+.favorite{
+    background-color:var(--material-orange);
+    border-radius:5px;
+    color:var(--material-white);
+    align-self:flex-end;
+    padding:3px 10px;
+}
+.favorite > p{
+    font-size:12px;
+}
+
+/* -- POLLO -- */
+#pollo{
+    background:rgba(0, 0, 0, 0.4) url("../img/pollo.png");
+}

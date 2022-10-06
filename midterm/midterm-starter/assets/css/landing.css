@@ -69,6 +69,9 @@ header{
     animation-delay:var(--landing-button-load-delay);
     animation-fill-mode:forwards;
 }
+#landingButton > a:visited{
+    color:var(--material-white);
+}
 #chevron{
     position:absolute;
     bottom:25px;
@@ -123,7 +126,7 @@ header{
     line-height:0;
     padding:15px 10px;
 }
-.splitNodeTextSection button:hover{
+.splitNodeTextSection > button:hover{
     cursor:pointer;
 }
 .splitNodeTextSection a{
