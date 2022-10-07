@@ -5,7 +5,7 @@
  * @author Connor Bernard <connorbernard@berkeley.edu>
  *
  * Created at     : 2022-09-28 13:07:00
- * Last modified  : 2022-10-06 17:06:08
+ * Last modified  : 2022-10-06 18:38:15
  */
 
 /* -- SET UP -- */
@@ -55,6 +55,7 @@ html{
     -ms-overflow-style:none;
     scrollbar-width:none;
     overflow-x:hidden;
+    background-color:var(--material-white);
 }
 html::-webkit-scrollbar{
     display:none;
@@ -62,6 +63,7 @@ html::-webkit-scrollbar{
 
 body{
     margin:0;
+    background-color:var(--material-white);
 }
 
 /* -- HEADER -- */

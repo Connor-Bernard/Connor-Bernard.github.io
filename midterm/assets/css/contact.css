@@ -5,14 +5,13 @@
  * @author Connor Bernard <connorbernard@berkeley.edu>
  *
  * Created at     : 2022-10-05 21:15:00
- * Last modified  : 2022-10-06 16:46:43
+ * Last modified  : 2022-10-06 18:37:30
  */
 @import "style.css";
 
 /* -- CONTACT NODE -- */
 #contactNode{
     width:100%;
-    height:78vh;
     background-color:var(--material-white);
     display:flex;
     flex-direction:column;
@@ -25,6 +24,7 @@
 #contactForm{
     display:flex;
     flex-direction:column;
+    margin-bottom:7vh;
 }
 input[type="text"], textarea{
     background-color:var(--material-white);
