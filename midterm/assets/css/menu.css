@@ -4,8 +4,6 @@
  * @summary Menu page styling
  * @author Connor Bernard <connorbernard@berkeley.edu>
  *
- * Created at     : 2022-10-05 22:04:00
- * Last modified  : 2022-10-06 17:33:00
  */
 
 @import "style.css";
@@ -40,6 +38,8 @@ body{
     justify-content:center;
     gap:30px;
     margin:15px 100px;
+    max-width:1400px;
+    align-self:center;
 }
 .item{
     background-color:var(--material-white);

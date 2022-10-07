@@ -4,8 +4,6 @@
  - @summary Contact page
  - @author Connor Bernard <connorbernard@berkeley.edu>
  -
- - Created at     : 2022-10-05 11:15:00
- - Last modified  : 2022-10-06 18:34:00
  -->
 
 <!DOCTYPE html>
@@ -53,11 +51,11 @@
                 Send us a message and we’ll get back to you as soon as possible.<br />
                 Looking forward to hearing from you.
             </p>
-            <form id="contactForm" method="post">
-                <input type="text" name="name" value="NAME" required />
-                <input type="text" name="email" value="EMAIL" required />
-                <input type="text" name="subject" value="SUBJECT" required />
-                <textarea id="messageEntry" rows="4" cols="50" required >MESSAGE</textarea>
+            <form id="contactForm" action="./assets/php/formHandler.php" method="POST">
+                <input type="text" name="name" placeholder="NAME" required />
+                <input type="text" name="email" placeholder="EMAIL" required />
+                <input type="text" name="subject" placeholder="SUBJECT" required />
+                <textarea id="messageEntry" name="message" rows="4" cols="50" placeholder="MESSAGE" required></textarea>
                 <button class="submitButton navButton" data-sitekey="reCAPTCHA_site_key"
                 data-callback='onSubmit' data-action='submit'>SEND</button>
             </form>

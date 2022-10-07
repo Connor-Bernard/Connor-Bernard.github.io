@@ -7,8 +7,6 @@
  * @summary Utility for updating the menu items
  * @author Connor Bernard <connorbernard@berkeley.edu>
  *
- * Created at     : 2022-10-06 09:58:00
- * Last modified  : 2022-10-06 17:25:28
  */
 
 function populateMenu(menuData){

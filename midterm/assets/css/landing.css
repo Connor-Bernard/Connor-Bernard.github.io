@@ -4,8 +4,6 @@
  * @summary Landing page styling
  * @author Connor Bernard <connorbernard@berkeley.edu>
  *
- * Created at     : 2022-10-04 20:21:00
- * Last modified  : 2022-10-06 16:50:08
  */
 
 @import "./style.css";
@@ -106,10 +104,10 @@ header{
     display:flex;
     flex-direction:row;
     padding:56px 122px;
-    justify-content:space-evenly;
+    justify-content:center;
+    gap:6vw;
 }
 .splitNodeTextSection{
-    margin-left:30px;
     background-color:var(--material-black);
     color:var(--material-white);
     width:240px;
@@ -188,6 +186,9 @@ header{
 }
 #imageNode > img{
     width:100%;
+    background:url("../img/pesto.png");
+    background-size:cover;
+    background-position:0% 70%;
 }
 
 /* -- ANIMATIONS -- */
