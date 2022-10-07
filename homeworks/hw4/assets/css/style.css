@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+:root{
+    --sans:'Open Sans', sans-serif;
+    --material-black:#070707;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -9,12 +16,13 @@ header {
     padding-bottom: 20px;
     background: white;
     /* PROBLEM 1: Make the header stick to the top as you scroll */
-
+    position:fixed;
 }
 
 .content {
     width: 800px;
     /* PROBLEM 2: Align the page content to the center of the screen */
+    margin:auto;
 
 }
 
@@ -42,6 +50,7 @@ header {
     overflow: hidden;
     margin-right: 40px;
     /* PROBLEM 3: Give .image-card the appropriate position type */
+    position:relative;
 
 }
 
@@ -56,10 +65,10 @@ header {
 .image-card-color-overlay {
     position: absolute;
     /* PROBLEM 4: Move the color overlay to cover the image properly */
-    top: 50px;
-    left: 200px;
+    top:0;
+    left:0;
     /* PROBLEM 5: What should the opacity be when there is no hover? */
-    opacity: 0.7;
+    opacity: 0;
     transition: 0.3s;
     background-color: navy;
 }
@@ -71,6 +80,9 @@ header {
 
 .image-card-text {
     /* PROBLEM 6: Similar to .image-card-cover-overlay, position the card text */
+    position:absolute;
+    bottom:0;
+    left:0;
 
 
 
@@ -80,22 +92,32 @@ header {
 
 /* PROBLEM 7: Improve the typography and colors of this page! */
 
-#title {
+#title, h1, h2, h3, p{
+    font-family:var(--sans);
+    color:var(--material-black);
+}
 
+#title {
+    font-size:2em;
+    font-weight:500;
 }
 
 h1 {
-
+    font-size:1.8em;
+    line-height:1.3em;
 }
 
 h2 {
-
+    font-size:1.5em;
+    line-height:1em;
+    font-weight:500;
 }
 
 h3 {
-
+    font-size:1.3em;
 }
 
 p {
-
+    font-size:1em; /* Standard sizing looks good. */
+    line-height:1.8em;
 }
