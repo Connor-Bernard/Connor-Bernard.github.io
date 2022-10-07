@@ -1,7 +1,7 @@
 <!--
  - Copyright (c) 2022
  -
- - @summary Form Handler and Response Page
+ - @summary Form Handler
  - @author Connor Bernard <connorbernard@berkeley.edu>
  -
  -->
@@ -15,3 +15,4 @@ $email_subject = "Gypsy's: $subject";
 $email_body = "User: $user_name\nUser email: $user_email\nMessage: $message\n";
 $sent = @mail("connorbernard@berkeley.edu", $email_subject, $email_body);
 header("Location: ../../contact.html?submitted=$sent");
+?>
