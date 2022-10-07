@@ -42,8 +42,16 @@ input[type="text"], textarea{
 textarea{
     resize:none;
 }
-#contactForm button{
+#submitButton{
     font-size:16px;
     padding:8px 30px;
     align-self:center;
+}
+.success{
+    text-align: center;
+    color:var(--material-green);
+}
+.failed{
+    text-align:center;
+    color:var(--material-red);
 }
