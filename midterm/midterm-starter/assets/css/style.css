@@ -1,3 +1,13 @@
+/**
+ * Copyright (c) 2022
+ *
+ * @summary General styling for Gypsy's website
+ * @author Connor Bernard <connorbernard@berkeley.edu>
+ *
+ * Created at     : 2022-09-28 13:07:00
+ * Last modified  : 2022-10-06 17:06:08
+ */
+
 /* -- SET UP -- */
 @import url("https://fonts.googleapis.com/css2?family=Manrope");
 @import url("https://fonts.googleapis.com/css2?family=Inter");
@@ -110,7 +120,7 @@ header{
     box-shadow:4px 4px 4px rgba(0, 0, 0, 0.25);
     padding:5px 20px;
 }
-.navbutton:active{
+.navbutton:hover{
     box-shadow:inset 4px 4px 4px rgb(0 0 0 / 25%);
 }
 .headerOffset{

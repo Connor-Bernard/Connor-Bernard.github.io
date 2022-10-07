@@ -1,3 +1,13 @@
+/**
+ * Copyright (c) 2022
+ *
+ * @summary Landing page styling
+ * @author Connor Bernard <connorbernard@berkeley.edu>
+ *
+ * Created at     : 2022-10-04 20:21:00
+ * Last modified  : 2022-10-06 16:50:08
+ */
+
 @import "./style.css";
 
 /* -- SET UP -- */
@@ -58,7 +68,6 @@ header{
     border-radius:10px;
     background-color:var(--material-orange);
     padding:10px 14px;
-    color:var(--material-white);
     font-size:18px;
     font-family:"Inter";
     font-weight:bolder;
@@ -68,6 +77,9 @@ header{
     animation-timing-function: ease-in;
     animation-delay:var(--landing-button-load-delay);
     animation-fill-mode:forwards;
+}
+#landingButton > a{
+    color:var(--material-white);
 }
 #landingButton > a:visited{
     color:var(--material-white);

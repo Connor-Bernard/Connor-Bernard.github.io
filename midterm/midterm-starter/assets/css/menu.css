@@ -1,20 +1,28 @@
+/**
+ * Copyright (c) 2022
+ *
+ * @summary Menu page styling
+ * @author Connor Bernard <connorbernard@berkeley.edu>
+ *
+ * Created at     : 2022-10-05 22:04:00
+ * Last modified  : 2022-10-06 17:33:00
+ */
+
 @import "style.css";
-/* TODO
- * [ ] Fix the sizing of double lined titled elemnts
- * [ ] Ensure that background images scale as necessary
-*/
+
+body{
+    background-color:var(--material-white);
+}
+
 .menuNode{
     width:100%;
     background-repeat:no-repeat !important;
-    background-size:100% !important;
-    background-position:0% 30% !important;
+    background-size:cover !important;
     background-blend-mode:darken !important;
     display:flex;
     flex-direction:column;
+    padding-bottom:45px;
     margin-bottom:50px;
-}
-.menuNode:last-child{
-    margin-bottom:0;
 }
 .protein{
     margin-top:20px;
@@ -36,7 +44,7 @@
 .item{
     background-color:var(--material-white);
     opacity:80%;
-    width:250px;
+    width:283px;
     height:245px;
     border:2px solid var(--material-black);
     border-radius:10px;
@@ -89,21 +97,71 @@
     display:flex;
     flex-direction:row;
     justify-content:flex-start;
-    gap:10px;
+    gap:12px;
     margin:20px 10px;
 }
-.favorite{
+.fave, .V{
     background-color:var(--material-orange);
     border-radius:5px;
     color:var(--material-white);
     align-self:flex-end;
     padding:3px 10px;
 }
-.favorite > p{
+.fave > p, .V > p{
     font-size:12px;
+}
+
+.V{
+    background-color:var(--material-green);
+    border-radius:50%;
+    padding:5px 10px;
 }
 
 /* -- POLLO -- */
 #pollo{
     background:rgba(0, 0, 0, 0.4) url("../img/pollo.png");
+    background-position:0% 30%;
+}
+
+/* -- MANZO -- */
+#manzo{
+    background:rgba(0, 0, 0, 0.4) url("../img/manzo.png");
+    background-position:0% 30%;
+}
+
+/* -- PESCE -- */
+#pesce{
+    background:rgba(0, 0, 0, 0.4) url("../img/pesce.png");
+    background-position:0% 50%;
+}
+
+/* -- VEGETARIANO -- */
+#vegetariano{
+    background:rgba(0, 0, 0, 0.4) url("../img/vegetariano.png");
+    background-position:0% 50%;
+}
+
+/* -- PASTA CLAZONE -- */
+#calzonepasta{
+    background:rgba(0, 0, 0, 0.3) url("../img/calzonepasta.png");
+    background-position:0% 60%;
+}
+
+/* -- PIZZA -- */
+#pizza{
+    background:rgba(0, 0, 0, 0.4) url("../img/pizza.png");
+    background-position:0% 30%;
+}
+
+/* -- CALZONE -- */
+#calzone{
+    background:rgba(0, 0, 0, 0.3) url("../img/calzone.png");
+    background-position:0% 60%;
+}
+
+/* -- SALAD -- */
+#salad{
+    background:rgba(0, 0, 0, 0.3) url("../img/salad.png");
+    background-position:0% 40%;
+    margin-bottom:0;
 }
