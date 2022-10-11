@@ -15,8 +15,8 @@ function populateMenuByTemplate(menuData){
         const menuNode = menuSectionTemplate.content.cloneNode(true).children[0]
         const menuItemTemplate = menuNode.querySelector("[menuItemTemplate]")
         const itemsField = menuNode.querySelector(".menuItems")
-        menuNode.id = category
-        menuNode.querySelector("h2").textContent = category
+        menuNode.id = category.toLowerCase().split(" ").join("")
+        menuNode.querySelector("h2").textContent = category.toUpperCase()
         menuData[category].forEach((itemData) => {
             const menuItem = menuItemTemplate.content.cloneNode(true).children[0]
             const modifierTemplate = menuItem.querySelector("[modifier]")

@@ -235,7 +235,7 @@
             "modifiers":["V"]
         }
     ],
-    "calzonepasta":[
+    "calzone di pasta":[
         {
             "title":"Godfather",
             "price":12.24,
@@ -385,7 +385,7 @@
             "modifiers":[]
         }
     ],
-    "salad":[
+    "insalate e panini":[
         {
             "title":"Small Salad",
             "price":4.99,

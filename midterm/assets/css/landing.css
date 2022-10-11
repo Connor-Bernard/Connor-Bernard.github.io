@@ -60,6 +60,7 @@ header{
     animation-duration: var(--landing-text-load-time);
     animation-timing-function: ease-in;
     line-height:25px;
+    font-weight:500;
 }
 #landingButton{
     border:none;
@@ -68,7 +69,7 @@ header{
     padding:10px 14px;
     font-size:18px;
     font-family:"Inter";
-    font-weight:bolder;
+    font-weight:500;
     opacity:0;
     animation-name:fadeInSlideDown;
     animation-duration:var(--landing-button-load-time);
@@ -116,9 +117,10 @@ header{
     align-items:center;
     justify-content:center;
     padding:60px 53px;
+    padding-top:30px;
 }
 .splitNodeTextSection > h2{
-    line-height:3px;
+    text-align:center;
 }
 .splitNodeTextSection > p{
     text-align:center;

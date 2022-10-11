@@ -142,7 +142,7 @@ body{
 }
 
 /* -- PASTA CLAZONE -- */
-#calzonepasta{
+#calzonedipasta{
     background:rgba(0, 0, 0, 0.3) url("../img/calzonepasta.png");
     background-position:0% 60%;
 }
@@ -160,7 +160,7 @@ body{
 }
 
 /* -- SALAD -- */
-#salad{
+#insalateepanini{
     background:rgba(0, 0, 0, 0.3) url("../img/salad.png");
     background-position:0% 40%;
     margin-bottom:0;
