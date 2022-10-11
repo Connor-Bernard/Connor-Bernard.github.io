@@ -42,77 +42,42 @@
             <h3>Menu</h3>
         </section>
 
-        <!-- POLLO NODE -->
-        <section class="menuNode" id="pollo">
-            <div class="protein">
-                <h2>POLLO</h2>
-                <embed src="./assets/img/menuLine.svg" />
-            </div>
-            <div class="menuItems"></div>
-        </section>
+        <!-- TEMPLATE -->
+        <template menuNodeTemplate>
+            <section class="menuNode">
+                <div class="protein">
+                    <h2></h2>
+                    <embed src="./assets/img/menuLine.svg" />
+                </div>
+                <div class="menuItems">
+                    <template menuItemTemplate>
+                        <div class="item">
+                            <div class="itemHead">
+                                <h3></h3>
+                                <embed src="./assets/img/itemLine.svg">
+                                <div class="price">
+                                    <div class="dollar"></div>
+                                    <div class="cents"></div>
+                                </div>
+                            </div>
+                            <div class="itemDescription">
+                                <p></p>
+                            </div>
+                            <div class="modifiers">
+                                <template modifier>
+                                    <div class="modifier">
+                                        <p></p>
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </section>
+        </template>
 
-        <!-- MANZO NODE -->
-        <section class="menuNode" id="manzo">
-            <div class="protein">
-                <h2>MANZO</h2>
-                <embed src="./assets/img/menuLine.svg" />
-            </div>
-            <div class="menuItems"></div>
-        </section>
-
-        <!-- PESCE NODE -->
-        <section class="menuNode" id="pesce">
-            <div class="protein">
-                <h2>PESCE</h2>
-                <embed src="./assets/img/menuLine.svg" />
-            </div>
-            <div class="menuItems"></div>
-        </section>
-
-        <!-- VEGETARIANO NODE -->
-        <section class="menuNode" id="vegetariano">
-            <div class="protein">
-                <h2>VEGETARIANO</h2>
-                <embed src="./assets/img/menuLine.svg" />
-            </div>
-            <div class="menuItems"></div>
-        </section>
-
-        <!-- PASTA CALZONE NODE -->
-        <section class="menuNode" id="calzonepasta">
-            <div class="protein">
-                <h2>CALZONE DI PASTA</h2>
-                <embed src="./assets/img/menuLine.svg" />
-            </div>
-            <div class="menuItems"></div>
-        </section>
-
-        <!-- PIZZA NODE -->
-        <section class="menuNode" id="pizza">
-            <div class="protein">
-                <h2>PIZZA</h2>
-                <embed src="./assets/img/menuLine.svg" />
-            </div>
-            <div class="menuItems"></div>
-        </section>
-
-        <!-- CALZONE NODE -->
-        <section class="menuNode" id="calzone">
-            <div class="protein">
-                <h2>CALZONE</h2>
-                <embed src="./assets/img/menuLine.svg" />
-            </div>
-            <div class="menuItems"></div>
-        </section>
-
-        <!-- SALAD NODE -->
-        <section class="menuNode" id="salad">
-            <div class="protein">
-                <h2>INSALATE E PANINI</h2>
-                <embed src="./assets/img/menuLine.svg" />
-            </div>
-            <div class="menuItems"></div>
-        </section>
+        <!-- MENU -->
+        <div menu></div>
 
         <!-- FOOTER -->
         <footer>

@@ -9,70 +9,36 @@
  *
  */
 
-function populateMenu(menuData){
+function populateMenuByTemplate(menuData){
+    const menuSectionTemplate = document.querySelector("[menuNodeTemplate]")
     for(category in menuData){
-        const injectPoint = document.getElementById(category).getElementsByClassName("menuItems")[0];
-        menuData[category].forEach((item) => {
-            const itemBody = document.createElement("div");
-            itemBody.className = "item";
-            injectPoint.appendChild(itemBody);
-
-            const itemHead = document.createElement("div");
-            itemHead.className = "itemHead";
-            itemBody.appendChild(itemHead);
-
-            const itemName = document.createElement("h3");
-            itemName.textContent = item['title'];
-            itemHead.appendChild(itemName);
-
-            const line = document.createElement("embed");
-            line.src = "./assets/img/itemLine.svg";
-            itemHead.appendChild(line);
-
-            const price = document.createElement("div");
-            price.className = "price";
-            itemHead.appendChild(price);
-
-            const dollar = document.createElement("div");
-            dollar.className = "dollar";
-            dollar.textContent = Math.trunc(item["price"]);
-            price.appendChild(dollar);
-
-            const cents = document.createElement("div");
-            cents.className = "cents";
-            cents.textContent = Math.trunc(item["price"]%1*100)
-            price.appendChild(cents);
-
-            const itemDescription = document.createElement("div");
-            itemDescription.className = "itemDescription";
-            itemBody.appendChild(itemDescription);
-
-            const itemDescriptionParagraph = document.createElement("p");
-            itemDescriptionParagraph.textContent = item["description"];
-            itemDescription.appendChild(itemDescriptionParagraph);
-
-            itemBody.appendChild(generateModifiers(item["modifiers"]));
-        });
+        const menuNode = menuSectionTemplate.content.cloneNode(true).children[0]
+        const menuItemTemplate = menuNode.querySelector("[menuItemTemplate]")
+        const itemsField = menuNode.querySelector(".menuItems")
+        menuNode.id = category
+        menuNode.querySelector("h2").textContent = category
+        menuData[category].forEach((itemData) => {
+            const menuItem = menuItemTemplate.content.cloneNode(true).children[0]
+            const modifierTemplate = menuItem.querySelector("[modifier]")
+            const modifiersField = menuItem.querySelector(".modifiers")
+            menuItem.querySelector("h3").textContent = itemData["title"]
+            menuItem.querySelector(".dollar").textContent = Math.trunc(itemData["price"])
+            menuItem.querySelector(".cents").textContent = Math.trunc(itemData["price"]%1*100)
+            menuItem.querySelector("p").textContent = itemData["description"]
+            itemData["modifiers"].forEach((modifierName) => {
+                const modifier = modifierTemplate.content.cloneNode(true).children[0]
+                modifier.classList.add(modifierName)
+                modifier.querySelector("p").textContent = modifierName
+                modifiersField.appendChild(modifier)
+            })
+            itemsField.appendChild(menuItem)
+        })
+        document.querySelector("[menu]").appendChild(menuNode)
     }
-}
-
-function generateModifiers(modifiers){
-    const modifiersField = document.createElement("div");
-    modifiersField.className = "modifiers";
-    modifiers.forEach((modifier) => {
-        const modifierField = document.createElement("div");
-        modifierField.className = modifier;
-        modifiersField.appendChild(modifierField);
-
-        modifierTextContent = document.createElement("p");
-        modifierTextContent.textContent = modifier;
-        modifierField.appendChild(modifierTextContent);
-    });
-    return modifiersField;
 }
 
 fetch("./assets/js/menuItems.json").then(response => {
     response.json().then(data => {
-        populateMenu(data);
-    });
-});
+        populateMenuByTemplate(data)
+    })
+})
