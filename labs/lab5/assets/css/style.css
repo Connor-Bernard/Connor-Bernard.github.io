@@ -14,25 +14,28 @@ body {
 #q1-navbar {
 	background: #364156;
 	color: white;
-
+    display:flex;
+    align-items: flex-start;
+    gap:15px;
+    padding:5px;
 }
-
-
-
-
+#q1-navbar > div{
+    opacity:80%;
+}
+#q1-navbar > div:hover{
+    opacity:100%;
+}
 
 /************/
 /*question 2*/
 /************/
 
-/* No selectors given :o */
-
-/* Add the necessary code for all of question 2, flexbox-ception, below */
-
-
-
-
-
+#q2-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: space-between;
+}
 
 /*************************/
 /*OTHER CODE THAT WE USED*/
