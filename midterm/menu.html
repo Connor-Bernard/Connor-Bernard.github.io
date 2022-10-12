@@ -19,7 +19,8 @@
         <title>Gypsy's</title>
     </head>
     <body>
-        <script src="./assets/js/menu.js"></script>
+        <script src="./assets/js/menu.js" defer></script>
+
         <!-- HEADER -->
         <header>
             <a class="logo" href="./index.html">
@@ -47,14 +48,18 @@
             <section class="menuNode">
                 <div class="protein">
                     <h2></h2>
-                    <embed src="./assets/img/menuLine.svg" />
+                    <svg width="47" height="2" viewBox="0 0 47 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 1H46.5" stroke="#F7F7F0" stroke-width="2"/>
+                    </svg>
                 </div>
                 <div class="menuItems">
                     <template menuItemTemplate>
                         <div class="item">
                             <div class="itemHead">
                                 <h3></h3>
-                                <embed src="./assets/img/itemLine.svg">
+                                <svg width="61" height="3" viewBox="0 0 61 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1.36841L60 1.3684" stroke="#191716" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
                                 <div class="price">
                                     <div class="dollar"></div>
                                     <div class="cents"></div>

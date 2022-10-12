@@ -61,6 +61,7 @@ body{
     display:flex;
     flex-direction:row;
     justify-content:flex-start;
+    align-items: center;
     align-self:center;
     color:var(--material-black);
     margin-top:5px;
@@ -70,7 +71,7 @@ body{
     text-align: center;
     width:120px;
 }
-.itemHead > embed{
+.itemHead > svg{
     margin-right: 10px;
 }
 .price{
