@@ -1,13 +1,14 @@
 /**
  * Copyright (c) 2022
  *
- * Loading bar graphic on page load
+ * Loading bar graphic on page load (scrapped)
  *
  * @summary Event handler for loading bar
  * @author Connor Bernard <connorbernard@berkeley.edu>
  *
  */
 
+// For smooth loading remove this setInterval
 loadScreen = setInterval(() => {
     const percentageText = document.querySelector(".percentage").querySelector("p")
     const progressBar = document.querySelector(".progress")
@@ -19,7 +20,6 @@ loadScreen = setInterval(() => {
         percentageText.textContent = `${parseFloat(percentageLoaded)}%`
     }
 }, 1)
-
 window.addEventListener("load", () => {
     clearInterval(loadScreen)
     const percentageText = document.querySelector(".percentage").querySelector("p")
