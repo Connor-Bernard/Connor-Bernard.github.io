@@ -155,7 +155,6 @@ body{
 
 /* -- QUOTE NODE -- */
 #quoteNode{
-    width:100%;
     background-color:var(--material-white);
     padding:56px 122px;
     display:flex;
