@@ -12,10 +12,11 @@ Professional portfolio website
 - [?] High-Fid deisgn
 - [x] Update Icons in Assets Page
 - [ ] Gradients
+- [?] Remove two icons from each icon section
 
 ### HTML
-- [ ] Header
-- [ ] Landing
+- [x] Header
+- [x] Landing
 - [ ] About Me
 - [ ] Languages
 - [ ] Utilities
@@ -25,8 +26,8 @@ Professional portfolio website
 - [ ] Footer
 
 ### CSS
-- [ ] Header
-- [ ] Landing
+- [x] Header
+- [x] Landing
 - [ ] About Me
 - [ ] Languages
 - [ ] Utilities
@@ -34,6 +35,9 @@ Professional portfolio website
 - [ ] Portfolio
 - [ ] Contact Me
 - [ ] Footer
+- [ ] Mobile Friendlification
+-- [ ] Header
+-- [ ] Landing
 
 ### JS
 - [?] Load animation
@@ -43,6 +47,7 @@ Professional portfolio website
 - [ ] Populate Experience
 - [ ] Populate Portfolio
 - [ ] Handle Contact Me
+- [ ] Add active tag to the section presently being looked at
 
 ### PHP
 - [ ] Header

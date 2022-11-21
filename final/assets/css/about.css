@@ -1,0 +1,35 @@
+#aboutMeSection{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+#aboutMeTextContent{
+    text-align:center;
+    max-width:66%;
+}
+#aboutMeTextContent p{
+    margin-top:20px;
+}
+.iconSection{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.iconSection > h2{
+    margin:100px 0 50px;
+
+}
+.icons{
+    display:grid;
+    grid-template-columns:repeat(6, 1fr);
+    grid-column-gap:64px;
+    grid-row-gap:64px;
+}
+.icon{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.icon > img{
+    margin-bottom:25px;
+}

@@ -10,10 +10,18 @@
     --gradient-2:linear-gradient(90deg, #D370DB 0%, #4DB8FF 98.57%);
     --gradient-3:linear-gradient(217.32deg, #D370DB 3.7%, #4DB8FF 55.99%, #5EFC8D 100%);
 }
+
 html, body{
     margin:0;
     padding:0;
+    overflow-x:hidden;
+    -ms-overflow-style:none;
+    scrollbar-width:none;
 }
+html::-webkit-scrollbar{
+    display:none;
+}
+
 p, div, span, h1, h2{
     margin:0;
     color:white;
@@ -38,6 +46,13 @@ p{
     font-size:20px;
 }
 
+section:not(:first-of-type){
+    margin:100px 0 100px;
+}
+section:first-child{
+    background-color:red;
+}
+
 button{
     width:188px;
     height:60px;
@@ -60,12 +75,14 @@ body{
 }
 
 header{
+    background-color:black;
     width:100%;
     height:90px;
     position:fixed;
     display:flex;
     flex-direction:row;
     align-items:center;
+    z-index:1;
 }
 #headerOffset{
     height:90px;
@@ -74,8 +91,8 @@ header{
 .logo{
     margin-left:3%;
 }
-header nav{
-    width:50%;
+header > nav{
+    width:600px;
     display:flex;
     flex-direction:row;
     justify-content:space-between;
@@ -91,58 +108,4 @@ header nav{
 .active{
     font-weight:700;
     color:var(--accent) !important;
-}
-
-#helloSection{
-    height:calc(100vh - 90px);
-    width:100vw;
-    display:flex;
-    flex-direction:row;
-}
-.halfSection{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    width:50%;
-}
-#helloTextSection{
-    position:absolute;
-    display:flex;
-    flex-direction:column;
-}
-.textGradient2{
-    width:fit-content;
-    background:var(--gradient-2);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-    background-clip:text;
-    text-fill-color:transparent;
-}
-#helloSubNameText{
-    color:var(--gray);
-}
-#helloButtonSection{
-    width:fit-content;
-    display:flex;
-    flex-direction:row;
-    gap:20px;
-    margin-top:15px;
-}
-#portraitBorder{
-    position:relative;
-    background:var(--gradient-3);
-    width:706px;
-    height:706px;
-    border-radius:100%;
-}
-#portrait{
-    position:absolute;
-    top:8px;
-    left:8px;
-    background-image:url(../img/portrait.jpg);
-    background-size:150%;
-    background-position:-150px -650px;
-    width:690px;
-    height:690px;
-    border-radius:100%;
 }
