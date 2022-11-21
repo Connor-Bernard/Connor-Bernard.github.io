@@ -50,3 +50,4 @@ Professional portfolio website
 - [ ] Contact Me
 - [?] Git Integration
 - [ ] Login (think of some content to add to log into)
+- [ ] File hosting for CV
