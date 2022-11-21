@@ -1,0 +1,7 @@
+[
+    {
+        "title": "Streamlined Git Style VCS",
+        "description": "Used Java to create a version-control system that mimics some of the features of Git including active directory moderation, file hashing, merge conflict handling, and remote repository interactions.",
+        "languages": ["Java", "Bash", "Markdown"]
+    }
+]

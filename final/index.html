@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="./assets/css/master.css" />
         <link rel="stylesheet" href="./assets/css/hello.css" />
         <link rel="stylesheet" href="./assets/css/about.css" />
+        <link rel="stylesheet" href="./assets/css/experience.css" />
+        <link rel="stylesheet" href="./assets/css/portfolio.css">
         <!-- TODO: LINK IN OTHER LOCAL FILES AS NECESSARY -->
         <title>Connor Bernard</title>
     </head>
@@ -60,8 +62,10 @@
         </section>
         <section id="aboutMeSection">
             <div id="aboutMeTextContent">
-                <h1>About Me</h1>
-                <img src="./assets/img/sectionDividerLine.svg" />
+                <div class="sectionTitle">
+                    <h1>About Me</h1>
+                    <img src="./assets/img/sectionDividerLine.svg" />
+                </div>
                 <p>
                     Lorem ipsum dolor sit amet consectetur. Et phasellus in semper enim cursus eu. Sed amet ac netus aliquet. Felis dui ac
                     id mollis neque leo donec eleifend donec. Accumsan leo pellentesque tellus diam etiam arcu eget tempor. Vitae et tellus
@@ -92,6 +96,67 @@
                 </div>
             </div>
         </section>
-        <script src="./assets/js/icons.js"></script>
+
+        <section id="experienceSection">
+            <div class="sectionTitle">
+                <h1>Experience</h1>
+                <img src="./assets/img/sectionDividerLine.svg" />
+            </div>
+            <div id="experienceBoxes">
+                <template experienceBoxTemplate>
+                    <div class="rainbowBorder">
+                        <div class="experienceBox">
+                            <div class="fakeNavBar">
+                                <div class="fakeNavBarItem red"></div>
+                                <div class="fakeNavBarItem yellow"></div>
+                                <div class="fakeNavBarItem green"></div>
+                            </div>
+                            <img class="experienceLogo" src="COMPANY IMAGE" />
+                            <h2>Title</h2>
+                            <ul>
+                                <template experienceSubItemTemplate>
+                                    <li>
+                                        <p>
+                                            <strong class="experienceSubtitle">Subtitle</strong><strong class="locationSubtitle"></strong><span>:
+                                            Lorem ipsum dolor sit amet consectetur. Et phasellus in semper enim cursus eu. Sed amet ac netus aliquet. Felis dui ac
+                                            id mollis neque leo donec eleifend donec. Accumsan leo pellentesque tellus diam etiam arcu eget tempor. Vitae et tellus
+                                            maecenas donec blandit tortor ligula quis integer. Malesuada odio euismod vel aliquam elit arcu semper vel. Feugiat quam
+                                            sed porta scelerisque arcu tortor auctor massa sagittis.</span>
+                                        </p>
+                                    </li>
+                                </template>
+                            </ul>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </section>
+
+        <section id="portfolioSection">
+            <div class="sectionTitle">
+                <h1>Portfolio</h1>
+                <img src="./assets/img/sectionDividerLine.svg" />
+            </div>
+            <div id="portfolioItems">
+                <template portfolioItemTemplate>
+                    <div class="rainbowBorder">
+                        <div class="portfolioItem">
+                            <h2>Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur. Et phasellus in semper enim cursus eu. Sed amet ac netus aliquet. Felis dui ac
+                            id mollis neque leo donec eleifend donec. Accumsan leo pellentesque tellus diam etiam arcu eget tempor. Vitae et tellus
+                            maecenas donec blandit tortor ligula quis integer.</p>
+                            <div class="languages">
+                                <template languageBoxTemplate>
+                                    <div class="language">Language</div>
+                                </template>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </section>
+
+        <script src="./assets/js/icons.js" defer></script>
+        <script src="./assets/js/experience.js" defer></script>
     </body>
 </html>

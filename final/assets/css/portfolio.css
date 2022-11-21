@@ -1,0 +1,29 @@
+#portfolioItems{
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.portfolioItem{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    padding:30px;
+    background:black;
+    border-radius:15px;
+    max-width:800px;
+    margin:3px;
+}
+.languages{
+    display:flex;
+    flex-direction:row;
+    gap:15px;
+    margin-top:20px
+}
+.language{
+    padding:5px 8px;
+    color:var(--tertiary-pink);
+    background-color: rgba(211, 112, 219, 0.15);
+    border-radius:10px;;
+}
