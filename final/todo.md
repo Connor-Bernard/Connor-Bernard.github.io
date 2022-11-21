@@ -17,22 +17,22 @@ Professional portfolio website
 ### HTML
 - [x] Header
 - [x] Landing
-- [ ] About Me
-- [ ] Languages
-- [ ] Utilities
-- [ ] Experience
-- [ ] Portfolio
+- [x] About Me
+- [x] Languages
+- [x] Utilities
+- [x] Experience
+- [x] Portfolio
 - [ ] Contact Me
 - [ ] Footer
 
 ### CSS
 - [x] Header
 - [x] Landing
-- [ ] About Me
-- [ ] Languages
-- [ ] Utilities
-- [ ] Experience
-- [ ] Portfolio
+- [x] About Me
+- [x] Languages
+- [x] Utilities
+- [x] Experience
+- [x] Portfolio
 - [ ] Contact Me
 - [ ] Footer
 - [ ] Mobile Friendlification
@@ -42,12 +42,13 @@ Professional portfolio website
 ### JS
 - [?] Load animation
 - [?] Highlighting active section in Header
-- [ ] Populate My Languages
-- [ ] Populate My Utilities
-- [ ] Populate Experience
-- [ ] Populate Portfolio
+- [x] Populate My Languages
+- [x] Populate My Utilities
+- [x] Populate Experience
+- [x] Populate Portfolio
 - [ ] Handle Contact Me
 - [ ] Add active tag to the section presently being looked at
+- [ ] Clean up JSON accesses
 
 ### PHP
 - [ ] Header
@@ -56,3 +57,6 @@ Professional portfolio website
 - [?] Git Integration
 - [ ] Login (think of some content to add to log into)
 - [ ] File hosting for CV
+
+### Copy
+- [ ] Complete Bio Section

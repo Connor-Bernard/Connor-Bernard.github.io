@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="./assets/css/about.css" />
         <link rel="stylesheet" href="./assets/css/experience.css" />
         <link rel="stylesheet" href="./assets/css/portfolio.css">
+        <link rel="stylesheet" href="/assets/css/contact.css" />
         <!-- TODO: LINK IN OTHER LOCAL FILES AS NECESSARY -->
         <title>Connor Bernard</title>
     </head>
@@ -19,23 +20,23 @@
             </div>
             <nav>
                 <div class="navItem">
-                    <a class="active" href="#home">Home</a>
+                    <a class="active" href="#top">Home</a>
                 </div>
                 <div class="navItem">
-                    <a href="#aboutMe">About Me</a>
+                    <a href="#AboutMe">About Me</a>
                 </div>
                 <div class="navItem">
-                    <a href="#experience">Experience</a>
+                    <a href="#Experience">Experience</a>
                 </div>
                 <div class="navItem">
-                    <a href="#portfolio">Portfolio</a>
+                    <a href="#Portfolio">Portfolio</a>
                 </div>
                 <div class="navItem">
-                    <a href="#contact">Contact</a>
+                    <a href="#Contact">Contact</a>
                 </div>
             </nav>
         </header>
-        <div id="headerOffset"></div>
+        <div style="margin-top:90px;"></div>
         <section id="helloSection">
             <div class="halfSection">
                 <div id="helloTextSection">
@@ -60,6 +61,7 @@
                 </div>
             </div>
         </section>
+        <div id="AboutMe" class="jumpLocation"></div>
         <section id="aboutMeSection">
             <div id="aboutMeTextContent">
                 <div class="sectionTitle">
@@ -97,6 +99,7 @@
             </div>
         </section>
 
+        <div id="Experience" class="jumpLocation"></div>
         <section id="experienceSection">
             <div class="sectionTitle">
                 <h1>Experience</h1>
@@ -132,6 +135,7 @@
             </div>
         </section>
 
+        <div id="Portfolio" class="jumpLocation"></div>
         <section id="portfolioSection">
             <div class="sectionTitle">
                 <h1>Portfolio</h1>
@@ -156,7 +160,52 @@
             </div>
         </section>
 
+        <div id="Contact" class="jumpLocation"></div>
+        <section id="contactSection">
+            <div class="sectionTitle">
+                <h1>Say Hello!</h1>
+                <img src="./assets/img/sectionDividerLine.svg" />
+            </div>
+            <form method="POST" action="/assets/php/contact.php" autocomplete="off">
+                <div id="formIntro">
+                    <div class="shortInputs">
+                        <div class="inputBox">
+                            <input type="text" name="firstName" required="true" />
+                            <label><strong>* </strong>First Name</label>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" name="email" required="true" />
+                            <label><strong>* </strong>Email</label>
+                        </div>
+                    </div>
+                    <div class="shortInputs">
+                        <div class="inputBox">
+                            <input type="text" name="lastName" required="true" />
+                            <label><strong>* </strong>Last Name</label>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" name="phone" required="false" />
+                            <label>Phone Number</label>
+                        </div>
+                    </div>
+                </div>
+                <div id="formConclusion">
+                    <textarea name="message" rows="5" cols="50" placeholder="Message"></textarea>
+                    <template submissionMessageTemplate>
+                        <div class="messageType"><strong>messageType</strong><span>: Message</span></div>
+                    </template>
+                    <button type="submit" class="accentButton">Submit</button>
+                </div>
+            </form>
+        </section>
+
+        <footer>
+            
+        </footer>
+
         <script src="./assets/js/icons.js" defer></script>
         <script src="./assets/js/experience.js" defer></script>
+        <script src="./assets/js/portfolio.js" defer></script>
+        <script src="/assets/js/contact.js"></script>
     </body>
 </html>

@@ -4,12 +4,6 @@
     display:flex;
     flex-direction:row;
 }
-.halfSection{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    width:50%;
-}
 #helloTextSection{
     position:absolute;
     display:flex;
