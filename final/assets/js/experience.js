@@ -14,11 +14,13 @@ function populateExperienceField(experienceData){
         experience["content"].forEach(subItem => {
             const currSubItemTemplate = subItemTemplate.content.cloneNode(true).children[0];
             currSubItemTemplate.querySelectorAll("strong")[0].textContent = `${subItem["subtitle"]}`;
-            const location = subItem["location"];
-            if(location){
-                currSubItemTemplate.querySelectorAll("strong")[1].textContent = ` @ ${location}`;
+            if (window.innerWidth > 470) {
+                const location = subItem["location"];
+                if(location){
+                    currSubItemTemplate.querySelectorAll("strong")[1].textContent = ` @ ${location}`;
+                }
+                currSubItemTemplate.querySelector("span").textContent = `: ${subItem["description"]}`;
             }
-            currSubItemTemplate.querySelector("span").textContent = `: ${subItem["description"]}`;
             subItemInjectPoint.appendChild(currSubItemTemplate);
         });
         experienceInjectPoint.appendChild(currExperienceTemplate);
@@ -35,6 +37,7 @@ function populateExperienceField(experienceData){
 /**
  * Updates the heights of the experience blocks to allow use of gradient border
  * needs to be called AFTER company images load (present issue)
+ * Can be done by implementing eager loading on headers, but ideally not implemented that way;
  */
 // function updateExperienceHeights(){
 //     let currLargestBlock = 0;

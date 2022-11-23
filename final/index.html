@@ -4,39 +4,46 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./assets/css/master.css" />
-        <link rel="stylesheet" href="./assets/css/hello.css" />
-        <link rel="stylesheet" href="./assets/css/about.css" />
-        <link rel="stylesheet" href="./assets/css/experience.css" />
-        <link rel="stylesheet" href="./assets/css/portfolio.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="stylesheet" href="/assets/css/master.css" />
+        <link rel="stylesheet" href="/assets/css/hello.css" />
+        <link rel="stylesheet" href="/assets/css/about.css" />
+        <link rel="stylesheet" href="/assets/css/experience.css" />
+        <link rel="stylesheet" href="/assets/css/portfolio.css">
         <link rel="stylesheet" href="/assets/css/contact.css" />
-        <!-- TODO: LINK IN OTHER LOCAL FILES AS NECESSARY -->
         <title>Connor Bernard</title>
     </head>
     <body>
         <header>
-            <div class="logo">
-                <img src="./assets/img/logo.svg" height=65px />
+            <div class="hfContent">
+                <div class="logo">
+                    <a href="#top"><img src="/assets/img/logo.svg" height=65px /></a>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <nav class="headerNav">
+                    <div class="navItem">
+                        <a href="#AboutMe">About Me</a>
+                    </div>
+                    <div class="navItem">
+                        <a href="#Experience">Experience</a>
+                    </div>
+                    <div class="navItem">
+                        <a href="#Portfolio">Portfolio</a>
+                    </div>
+                    <div class="navItem">
+                        <a href="#Contact">Contact</a>
+                    </div>
+                </nav>
             </div>
-            <nav>
-                <div class="navItem">
-                    <a class="active" href="#top">Home</a>
-                </div>
-                <div class="navItem">
-                    <a href="#AboutMe">About Me</a>
-                </div>
-                <div class="navItem">
-                    <a href="#Experience">Experience</a>
-                </div>
-                <div class="navItem">
-                    <a href="#Portfolio">Portfolio</a>
-                </div>
-                <div class="navItem">
-                    <a href="#Contact">Contact</a>
-                </div>
-            </nav>
         </header>
-        <div style="margin-top:90px;"></div>
+        <div style="height:90px;"></div>
         <section id="helloSection">
             <div class="halfSection">
                 <div id="helloTextSection">
@@ -47,11 +54,13 @@
                     <p id="helloSubNameText">Software Engineer</p>
                 
                     <div id="helloButtonSection">
-                        <button class="accentButton">
-                            <img src="./assets/img/download.svg" />
-                            Download CV
-                        </button>
-                        <button class="outlineButton">Learn More</button>
+                        <a href="/assets/files/Connor_Resume.pdf" download="true">
+                            <button class="accentButton">
+                                <img src="/assets/img/download.svg" />
+                                Download CV
+                            </button>
+                        </a>
+                        <a href="#AboutMe"><button class="outlineButton">Learn More</button></a>
                     </div>
                 </div>
             </div>
@@ -66,7 +75,7 @@
             <div id="aboutMeTextContent">
                 <div class="sectionTitle">
                     <h1>About Me</h1>
-                    <img src="./assets/img/sectionDividerLine.svg" />
+                    <img src="/assets/img/sectionDividerLine.svg" />
                 </div>
                 <p>
                     Lorem ipsum dolor sit amet consectetur. Et phasellus in semper enim cursus eu. Sed amet ac netus aliquet. Felis dui ac
@@ -103,7 +112,7 @@
         <section id="experienceSection">
             <div class="sectionTitle">
                 <h1>Experience</h1>
-                <img src="./assets/img/sectionDividerLine.svg" />
+                <img src="/assets/img/sectionDividerLine.svg" />
             </div>
             <div id="experienceBoxes">
                 <template experienceBoxTemplate>
@@ -120,11 +129,7 @@
                                 <template experienceSubItemTemplate>
                                     <li>
                                         <p>
-                                            <strong class="experienceSubtitle">Subtitle</strong><strong class="locationSubtitle"></strong><span>:
-                                            Lorem ipsum dolor sit amet consectetur. Et phasellus in semper enim cursus eu. Sed amet ac netus aliquet. Felis dui ac
-                                            id mollis neque leo donec eleifend donec. Accumsan leo pellentesque tellus diam etiam arcu eget tempor. Vitae et tellus
-                                            maecenas donec blandit tortor ligula quis integer. Malesuada odio euismod vel aliquam elit arcu semper vel. Feugiat quam
-                                            sed porta scelerisque arcu tortor auctor massa sagittis.</span>
+                                            <strong class="experienceSubtitle"></strong><strong class="locationSubtitle"></strong><span></span>
                                         </p>
                                     </li>
                                 </template>
@@ -139,21 +144,20 @@
         <section id="portfolioSection">
             <div class="sectionTitle">
                 <h1>Portfolio</h1>
-                <img src="./assets/img/sectionDividerLine.svg" />
+                <img src="/assets/img/sectionDividerLine.svg" />
             </div>
             <div id="portfolioItems">
                 <template portfolioItemTemplate>
                     <div class="rainbowBorder">
                         <div class="portfolioItem">
-                            <h2>Title</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur. Et phasellus in semper enim cursus eu. Sed amet ac netus aliquet. Felis dui ac
-                            id mollis neque leo donec eleifend donec. Accumsan leo pellentesque tellus diam etiam arcu eget tempor. Vitae et tellus
-                            maecenas donec blandit tortor ligula quis integer.</p>
+                                <h2>Title</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur. Et phasellus in semper enim cursus eu. Sed amet ac netus aliquet. Felis dui ac
+                                id mollis neque leo donec eleifend donec. Accumsan leo pellentesque tellus diam etiam arcu eget tempor. Vitae et tellus
+                                maecenas donec blandit tortor ligula quis integer.</p>
                             <div class="languages">
                                 <template languageBoxTemplate>
                                     <div class="language">Language</div>
                                 </template>
-                            </div>
                         </div>
                     </div>
                 </template>
@@ -164,7 +168,7 @@
         <section id="contactSection">
             <div class="sectionTitle">
                 <h1>Say Hello!</h1>
-                <img src="./assets/img/sectionDividerLine.svg" />
+                <img src="/assets/img/sectionDividerLine.svg" />
             </div>
             <form method="POST" action="/assets/php/contact.php" autocomplete="off">
                 <div id="formIntro">
@@ -174,14 +178,12 @@
                             <label><strong>* </strong>First Name</label>
                         </div>
                         <div class="inputBox">
-                            <input type="text" name="email" required="true" />
-                            <label><strong>* </strong>Email</label>
-                        </div>
-                    </div>
-                    <div class="shortInputs">
-                        <div class="inputBox">
                             <input type="text" name="lastName" required="true" />
                             <label><strong>* </strong>Last Name</label>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" name="email" required="true" />
+                            <label><strong>* </strong>Email</label>
                         </div>
                         <div class="inputBox">
                             <input type="text" name="phone" required="false" />
@@ -190,7 +192,7 @@
                     </div>
                 </div>
                 <div id="formConclusion">
-                    <textarea name="message" rows="5" cols="50" placeholder="Message"></textarea>
+                    <textarea name="message" rows="5" placeholder="Message"></textarea>
                     <template submissionMessageTemplate>
                         <div class="messageType"><strong>messageType</strong><span>: Message</span></div>
                     </template>
@@ -199,13 +201,47 @@
             </form>
         </section>
 
-        <footer>
-            
-        </footer>
-
-        <script src="./assets/js/icons.js" defer></script>
-        <script src="./assets/js/experience.js" defer></script>
-        <script src="./assets/js/portfolio.js" defer></script>
+        <div style="position: relative; height:90px;">
+            <footer>
+                <div class="hfContent">
+                    <div class="socialIcons">
+                        <a href="https://github.com/Connor-Bernard">
+                            <img src="/assets/img/socialIcons/Github Logo.png" alt="GitHub access link">
+                        </a>
+                        <a href="https://www.linkedin.com/in/connorbernard/">
+                            <img src="/assets/img/socialIcons/Linkedin Logo.png" alt="LinkedIn access link">
+                        </a>
+                        <a href="https://bitbucket.org/connor-bernard/">
+                            <img src="/assets/img/socialIcons/Bitbucket Logo.png" alt="BitBucket access link">
+                        </a>
+                        <a href="mailto:connorbernard@berkeley.edu">
+                            <img src="/assets/img/socialIcons/Mail Symbol.png" alt="Email access link">
+                        </a>
+                    </div>
+                    <nav class="footerNav">
+                        <div class="navItem">
+                            <a href="#top">Home</a>
+                        </div>
+                        <div class="navItem">
+                            <a href="#AboutMe">About Me</a>
+                        </div>
+                        <div class="navItem">
+                            <a href="#Experience">Experience</a>
+                        </div>
+                        <div class="navItem">
+                            <a href="#Portfolio">Portfolio</a>
+                        </div>
+                        <div class="navItem">
+                            <a href="#Contact">Contact</a>
+                        </div>
+                    </nav>
+                </div>
+            </footer>
+        </div>
+        <script src="/assets/js/master.js"></script>
+        <script src="/assets/js/icons.js" defer></script>
+        <script src="/assets/js/experience.js" defer></script>
+        <script src="/assets/js/portfolio.js" defer></script>
         <script src="/assets/js/contact.js"></script>
     </body>
 </html>

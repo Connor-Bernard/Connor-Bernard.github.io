@@ -13,6 +13,8 @@ Professional portfolio website
 - [x] Update Icons in Assets Page
 - [ ] Gradients
 - [?] Remove two icons from each icon section
+- [?] Remove the home section and make the logo redirect to the home section
+- [ ] Create a icon for the tab header
 
 ### HTML
 - [x] Header
@@ -22,8 +24,10 @@ Professional portfolio website
 - [x] Utilities
 - [x] Experience
 - [x] Portfolio
-- [ ] Contact Me
-- [ ] Footer
+- [x] Contact Me
+- [x] Footer
+- [x] Fill in social links for footer icons
+- [ ] Maybe make the header and footer link hover text color rainbow
 
 ### CSS
 - [x] Header
@@ -33,8 +37,8 @@ Professional portfolio website
 - [x] Utilities
 - [x] Experience
 - [x] Portfolio
-- [ ] Contact Me
-- [ ] Footer
+- [x] Contact Me
+- [x] Footer
 - [ ] Mobile Friendlification
 -- [ ] Header
 -- [ ] Landing
@@ -46,14 +50,14 @@ Professional portfolio website
 - [x] Populate My Utilities
 - [x] Populate Experience
 - [x] Populate Portfolio
-- [ ] Handle Contact Me
+- [x] Handle Contact Me
 - [ ] Add active tag to the section presently being looked at
 - [ ] Clean up JSON accesses
 
 ### PHP
 - [ ] Header
 - [ ] Footer
-- [ ] Contact Me
+- [x] Contact Me
 - [?] Git Integration
 - [ ] Login (think of some content to add to log into)
 - [ ] File hosting for CV

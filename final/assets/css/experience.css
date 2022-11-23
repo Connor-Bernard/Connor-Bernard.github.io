@@ -5,10 +5,6 @@
     justify-content:center;
 }
 
-.rainbowBorder{
-    background:var(--gradient-3);
-    border-radius:15px;
-}
 .experienceBox{
     position:relative;
     display:flex;
@@ -17,9 +13,12 @@
     padding:30px;
     background:black;
     border-radius:15px;
-    max-width:800px;
+    max-width:700px;
     margin:3px;
-    min-height:830px;
+    min-height:870px;
+}
+.experienceBox > h2{
+    text-align:center;
 }
 
 .fakeNavBar{
@@ -51,8 +50,24 @@
 }
 
 .experienceSubtitle{
-    color:var(--tertiary-pink) !important;
+    color:var(--tertiary-pink);
 }
 .locationSubtitle{
-    color:var(--tertiary-green) !important;
+    color:var(--tertiary-green);
+}
+
+@media screen and (max-width:470px) {
+    .fakeNavBar{
+        display:none;
+    }
+    .experienceBox{
+        min-height: 0;
+        padding:20px;
+    }
+    .experienceBox > h2{
+        font-size: 26px;
+    }
+    .experienceSubtitle{
+        color:white;
+    }
 }

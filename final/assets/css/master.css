@@ -80,17 +80,18 @@ header{
     background-color:black;
     width:100%;
     height:90px;
-    position:fixed;
+    position:absolute;
+    top:0;
+    z-index:100;
+}
+.hfContent{
     display:flex;
     flex-direction:row;
     align-items:center;
-    z-index:1;
+    justify-content:space-between;
+    margin:0 3%;
 }
-
-.logo{
-    margin-left:3%;
-}
-header > nav{
+.hfContent > nav{
     width:600px;
     display:flex;
     flex-direction:row;
@@ -99,16 +100,34 @@ header > nav{
     position:absolute;
     right:3%;
 }
+.hfContent > .logo{
+    margin-top:10px;
+}
+
 .navItem a{
     color:white;
     font-family: var(--copy-font);
     text-decoration:none;
     font-size:20px;
 }
-.active{
+.navItem a:hover{
+    color:var(--accent);
+}
+.hamburger{
+    display:none; 
+}
+.hamburger > .bar{
+    display:block;
+    width:25px;
+    height:3px;
+    margin:5px auto;
+    transition:all 0.3s ease-in-out;
+    background-color:white;
+}
+/* .active{
     font-weight:700;
     color:var(--accent) !important;
-}
+} */
 .jumpLocation{
     padding-top:.1px;
 }
@@ -128,4 +147,87 @@ header > nav{
     align-items:center;
     justify-content:center;
     width:50%;
+}
+
+footer{
+    box-sizing:border-box;
+    width:100%;
+    height:90px;
+    position:absolute;
+    bottom:0;
+    z-index:1;
+}
+.socialIcons{
+    display:flex;
+    flex-direction:row;
+    width:max(10vh, 1vw);
+    gap:25px;
+}
+.socialIcons > a > img{
+    width:max(5vh, 5vw);
+    max-width: 60px;
+    min-width: 40px;
+}
+
+.rainbowBorder{
+    background:var(--gradient-3);
+    border-radius:15px;
+    margin:0 20px;
+}
+
+@media screen and (max-width:1024px){
+    .hfContent > .headerNav{
+        position:absolute;
+        top:-210px;
+        right:50%;
+        transform:translate(50%);
+        gap:15px;
+        flex-direction:column;
+        width:120%;
+        background-color:rgba(0,0,0,0.75);
+        padding:30px 0;
+        border:2px solid white;
+        transition:all .3s ease-in-out;
+        opacity:0;
+    }
+    .hfContent > .headerNav.active{
+        display:flex;
+        top:90px;
+        opacity:1;
+    }
+    .hamburger{
+        z-index:1000;
+        display:block;
+        cursor:pointer;
+    }
+    .hamburger.active > .bar:first-child{
+        transform:translateY(8px) rotate(45deg);
+    }
+    .hamburger.active > .bar:nth-child(2){
+        opacity:0;
+    }
+    .hamburger.active > .bar:nth-child(3){
+        transform:translateY(-8px) rotate(-45deg);
+    }
+    .hfContent > .footerNav{
+        align-self:center;
+        width: 40%;
+        height:90px;
+        flex-wrap:wrap;
+        flex-direction:column;
+        justify-content:center;
+        gap:5px;
+    }
+}
+
+@media screen and (max-width:512px) {
+    .hfContent > .footerNav{
+        display:none;
+    }
+    footer > .hfContent{
+        justify-content:center;
+    }
+    .socialIcons{
+        width:auto;
+    }
 }

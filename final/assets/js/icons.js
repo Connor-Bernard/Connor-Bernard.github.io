@@ -4,16 +4,19 @@
  * @param {JSON Object Array} iconData 
  */
 function populateLanguageField(iconData){
+    const windowSize = window.innerWidth;
     const template = document.querySelector("[iconTemplate]");
     let insertLocation = null;
-    iconData.forEach(element => {
-        if(!insertLocation){
-            insertLocation = document.querySelector(`[${element["type"]}]`);
+    iconData.forEach((element, i) => {
+        if(windowSize > 600 || i < 6){
+            if(!insertLocation){
+                insertLocation = document.querySelector(`[${element["type"]}]`);
+            }
+            const currIconTemplate = template.content.cloneNode(true).children[0];
+            currIconTemplate.querySelector("p").textContent = element["name"];
+            currIconTemplate.querySelector("img").src = element["link"];
+            insertLocation.appendChild(currIconTemplate);
         }
-        const currIconTemplate = template.content.cloneNode(true).children[0];
-        currIconTemplate.querySelector("p").textContent = element["name"];
-        currIconTemplate.querySelector("img").src = element["link"];
-        insertLocation.appendChild(currIconTemplate);
     });
 }
 
