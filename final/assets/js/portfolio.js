@@ -20,7 +20,7 @@ function populatePortfolio(portfolioData){
     });
 }
 
-fetch("./assets/json/portfolio.json").then(response => {
+fetch("/assets/json/portfolio.json").then(response => {
     response.json().then(portfolioData => {
         populatePortfolio(portfolioData);
     });

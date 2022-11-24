@@ -1,5 +1,5 @@
 /**
- * Toggles the provided hamburger
+ * Toggles the provided hamburger.
  * @param {HTML Element} hamburger 
  * @param {HTML Element} navMenu 
  */
@@ -15,7 +15,22 @@ function toggleHamburger(hamburger, navMenu){
 }
 
 /**
- * Initializes the hamburger with all necessary events and listeners
+ * Handles the loading of blur elements.  Prevents from loading outside of
+ * expected loading regions.
+ */
+// function blurHandler(){
+//     const footerBoundingRect = document.querySelector("header").getBoundingClientRect();
+//     document.querySelectorAll(".blur").forEach(blurElement => {
+//         const boundingRect = blurElement.getBoundingClientRect();
+//         while(Math.abs(boundingRect.y) + boundingRect.height < Math.abs(footerBoundingRect.y) + footerBoundingRect.height) {
+//             console.log(Math.abs(boundingRect.y) + boundingRect.height);
+//             boundingRect.y -= boundingRect.height;
+//         }
+//     })
+// }
+
+/**
+ * Initializes the hamburger with all necessary events and listeners.
  */
 function __initHamburger__(){
     const hamburger = document.querySelector(".hamburger");
@@ -37,4 +52,14 @@ function __initHamburger__(){
     });
 }
 
+// document.querySelectorAll(".blur").forEach(blurElement => {
+//     addEventListener("load", () => {
+//         blurHandler();
+//     });
+// });
 __initHamburger__();
+
+addEventListener("load", () => {
+    document.querySelector("#loaderPage").style.display = "none";
+    document.querySelector("header").style.position = "fixed";
+});

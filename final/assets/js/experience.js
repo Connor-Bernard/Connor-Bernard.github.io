@@ -34,6 +34,18 @@ function populateExperienceField(experienceData){
         // });
     });
 }
+
+function updateCopy(){
+    if(window.innerWidth < 425){
+        document.querySelectorAll(".experienceCopy").forEach(copySection => {
+            copySection.style.display = "none";
+        });
+    } else {
+        document.querySelectorAll(".experienceCopy").forEach(copySection => {
+            copySection.style.display = "inline";
+        });
+    }
+}
 /**
  * Updates the heights of the experience blocks to allow use of gradient border
  * needs to be called AFTER company images load (present issue)
@@ -49,8 +61,12 @@ function populateExperienceField(experienceData){
 //     });
 // }
 
-fetch("./assets/json/experiences.json").then(response => {
+fetch("/assets/json/experiences.json").then(response => {
     response.json().then(data => {
         populateExperienceField(data);
     });
 });
+
+addEventListener("resize", () => {
+    updateCopy();
+})

@@ -11,10 +11,10 @@ Professional portfolio website
 - [x] Graphics
 - [?] High-Fid deisgn
 - [x] Update Icons in Assets Page
-- [ ] Gradients
-- [?] Remove two icons from each icon section
-- [?] Remove the home section and make the logo redirect to the home section
-- [ ] Create a icon for the tab header
+- [?] Gradient Blurs
+- [x] Remove two icons from each icon section
+- [x] Remove the home section and make the logo redirect to the home section
+- [x] Create a icon for the tab header
 
 ### HTML
 - [x] Header
@@ -27,10 +27,13 @@ Professional portfolio website
 - [x] Contact Me
 - [x] Footer
 - [x] Fill in social links for footer icons
-- [ ] Maybe make the header and footer link hover text color rainbow
+- [x] Make the header and footer link hover text color rainbow
 
 ### CSS
 - [x] Header
+-- [x] Make link hover rainbow
+-- [?] Make logo hover rainbow
+-- [x] Add scrollTo Animations
 - [x] Landing
 - [x] About Me
 - [x] Languages
@@ -39,9 +42,14 @@ Professional portfolio website
 - [x] Portfolio
 - [x] Contact Me
 - [x] Footer
-- [ ] Mobile Friendlification
--- [ ] Header
--- [ ] Landing
+- [x] Mobile Friendlification
+-- [x] Header
+-- [x] Hello
+-- [x] About Me
+-- [x] Experience
+-- [x] Portfolio
+-- [x] Contact
+-- [x] Footer
 
 ### JS
 - [?] Load animation
@@ -51,16 +59,22 @@ Professional portfolio website
 - [x] Populate Experience
 - [x] Populate Portfolio
 - [x] Handle Contact Me
-- [ ] Add active tag to the section presently being looked at
-- [ ] Clean up JSON accesses
+- [?] Add active tag to the section presently being looked at
+- [x] Make all relative links non-relative
+- [x] Create a loader
+- [x] Add resize events for dynamic content
+- [x] Re-update content on increasind display width
 
 ### PHP
-- [ ] Header
-- [ ] Footer
 - [x] Contact Me
 - [?] Git Integration
-- [ ] Login (think of some content to add to log into)
-- [ ] File hosting for CV
+- [?] Login (think of some content to add to log into)
+- [x] File hosting for CV
 
 ### Copy
-- [ ] Complete Bio Section
+- [x] Complete Bio Section
+
+### Optimization
+- [x] Ensure JS imports are defferred when possilbe
+- [x] Ensure essentual JS modules are configured as such
+- [x] Compress images
