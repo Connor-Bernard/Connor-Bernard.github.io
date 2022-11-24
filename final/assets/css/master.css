@@ -91,11 +91,11 @@ button{
 #loader {
     width:100px;
     height:100px;
-    border-radius: 50%;
-    display: inline-block;
-    border-top: 3px solid var(--accent);
-    border-right: 3px solid transparent;
-    animation: loader 1s linear infinite;
+    border-radius:50%;
+    display:inline-block;
+    border-top:3px solid var(--accent);
+    border-right:3px solid transparent;
+    animation:loader 1s linear infinite;
     z-index:1000;
 }
 
