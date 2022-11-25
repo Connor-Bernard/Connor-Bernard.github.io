@@ -1,6 +1,6 @@
 /**
  * Populates the Portfolio items with content.
- * @param {JSON Array} portfolioData 
+ * @param {JSON Array} portfolioData
  */
 function populatePortfolio(portfolioData){
     const portfolioItemInjectPoint = document.querySelector("#portfolioItems");
@@ -20,7 +20,7 @@ function populatePortfolio(portfolioData){
     });
 }
 
-fetch("/assets/json/portfolio.json").then(response => {
+fetch("./assets/json/portfolio.json").then(response => {
     response.json().then(portfolioData => {
         populatePortfolio(portfolioData);
     });

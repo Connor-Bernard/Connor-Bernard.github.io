@@ -1,6 +1,6 @@
 /**
  * Populates the content in the experience blocks using the HTML template
- * @param {JSON Array} experienceData 
+ * @param {JSON Array} experienceData
  */
 function populateExperienceField(experienceData){
     const experienceInjectPoint = document.querySelector("#experienceBoxes");
@@ -64,7 +64,7 @@ function updateCopy(){
 //     });
 // }
 
-fetch("/assets/json/experiences.json").then(response => {
+fetch("./assets/json/experiences.json").then(response => {
     response.json().then(data => {
         populateExperienceField(data);
     });

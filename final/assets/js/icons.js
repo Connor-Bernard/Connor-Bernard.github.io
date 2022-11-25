@@ -15,7 +15,7 @@ function updateIcons(){
 }
 /**
  * Populates the language Field of About Me
- * @param {JSON Object Array} iconData 
+ * @param {JSON Object Array} iconData
  */
 function populateLanguageField(iconData){
     const windowSize = window.innerWidth;
@@ -33,13 +33,13 @@ function populateLanguageField(iconData){
     updateIcons();
 }
 
-fetch("/assets/json/languages.json").then(response => {
+fetch("./assets/json/languages.json").then(response => {
     response.json().then(data => {
         populateLanguageField(data);
     });
 });
 
-fetch("/assets/json/utilities.json").then(response => {
+fetch("./assets/json/utilities.json").then(response => {
     response.json().then(data => {
         populateLanguageField(data);
     });
