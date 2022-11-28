@@ -1,0 +1,155 @@
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<title>WDD Homework 10</title>
+	<link rel="stylesheet" type="text/css" href="http://webdesigndecal.github.io/wddstylesheet/style.css">
+</head>
+
+<body>
+	<div id="container">
+		<div id="header">
+			<div id="header-caption">
+				<div id="header-caption-logo"><img class="img-scaled" src="assets/img/logo.png"></div>
+				<div id="header-caption-name">Web Design DeCal</div>
+				<div class="clear"></div>
+			</div>
+			<div id="header-content">
+				<!-- ASSIGNMENT NAME -->
+				<div id="header-title">Homework 10</div>
+				<!-- DUE DATE -->
+				<div id="header-due">Nov 28</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="info">
+				<!-- ASSIGNMENT TITLE -->
+				<div class="info-title">Dress Drizzy</div>
+				<div class="info-content">
+					<!-- REQUIRED TOOLS -->
+					<div class="info-required">Required Tool: Text Editor and Google Chrome Web Inspector</div>
+					<!-- INTRODUCTION -->
+					<div class="info-intro">In this assignment, you will use your pro skills in Javascript to create an
+						interactive dress up site for Drake.</div>
+				</div>
+			</div>
+			<div class="body">
+
+				<div class="body-header">Assignment</div>
+				<!-- CONTENT -->
+
+				<!-- Styled Tags; P, UL, LI, .caption, A, IMG-->
+				<!-- Add P Tags for each paragraph -->
+				<!-- Use UL LI Tags for each lists -->
+				<!-- Use P Tags with "caption" class for paragraph captions (60% opacity) -->
+				<!-- Use IMG Tags for images 
+				<script src="assets/script/script.js"></script>-->
+
+				<p class="caption">We have provided you with the backbone for Dress Drizzy. You can download the
+					assignment file here:</p>
+				<a href="hw10-starter.zip">
+					<div class="download">Download File</div>
+				</a>
+				<p class="caption">You will essentially be writing the script.js file from scratch in this assignment.
+				</p>
+
+				<!-- <div class="body-header">Part 0: Fill out the Peer Evaluation Form <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGAcR8qsJceyOv-lhwfVCCuS4ClCfgfhRTaQDYxJofhcsaTQ/viewform">.</a></div>
+						<p> All group members much each complete the form in order to get credit for the project. </p>
+						<a href="https://docs.google.com/forms/d/e/1FAIpQLSfGAcR8qsJceyOv-lhwfVCCuS4ClCfgfhRTaQDYxJofhcsaTQ/viewform"><div class="download">Fill Out Evaluation</div></a>
+						<p></p> -->
+
+				<div class="body-header">Part 1: Understanding the HTML</div>
+				<p>Take a second to watch the video of the final effect! (Excuse the yelling at the Spurs in the
+					background. heh. )</p>
+				<video width="660" controls>
+					<source src="assets/img/DressDrizzy.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+				<p>Take a look at the structure in the HTML file. (Don't worry about everything inside the last script
+					tag for now.) Also, notice how all the outfits are stacked on top of drake right now.</p>
+				<img src="assets/img/1.png">
+				<p>We need to hide all the outfits and selectively pick which ones to show based on what the user
+					clicks. Add "display: none;" into the .outfit class to hide all outfits: </p>
+				<div class="code">
+					<div class="code-content">
+						<div>.outfit {</div>
+						<div class="indent">z-index: 10;</div>
+						<div class="indent">position: absolute;</div>
+						<div class="indent">display: none;</div>
+						<div>}</div>
+					</div>
+				</div>
+				<p></p>
+				<div class="body-header">Part 2: Dress Drizzy</div>
+				<p>Now, we move onto dressing Drake.
+					<!-- <div class="code">
+							<div class="code-content">
+								<div>&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js&quot;&gt;&lt;/script&gt;</div>
+							</div>
+						</div> -->
+					<!-- <p class="caption">Hint: Where should this go in our HTML file? Check this week's lecture slides if you're not sure </p> -->
+
+					There is a "script" folder that contains a script file, called "script.js". Link this JS file in
+					your HTML.
+				</p>
+				<div class="code">
+					<div class="code-content">
+						<div>&lt;script src=&quot;assets/script/script.js&quot;&gt;&lt;/script&gt;</div>
+					</div>
+				</div>
+				<!-- <p class="caption">Hint to start off: how do we start off our JavaScript file? It might be helpful to reference the programming slides this week to see examples of jQuery syntax.</p> -->
+				<p> The script file starts with how to make the first outfit appear on Drake when you click on it. The
+					other outfits follow the same process.</p>
+				<p> <b>Outfit one: </b> We're going to "hide" and "show" the body and outfits to make it seem like we're
+					putting the selected outfit on Drake. Get the <code>#s1</code> element. When we click on the
+					<code>#s1</code> element, we should hide the <code>#body</code> element (Hint: set the
+					<code>#body</code>'s display property to none).</p>
+				<p>Next, we're going to hide all the outfits. Let's get the list of <code>.outfit</code> elements (Hint:
+					look into <code>getElementsByClassName</code>). Use a <code>for</code> loop to index through every
+					outfit in this list, and hide each outfit (Hint: we have to repeat this code for every outfit... how
+					can we shorten our code... let's make a function!).</p>
+				<p>Finally, to make it seem like Drake has changed into the outfit we selected, let's show the
+					<code>#o1</code> element (Hint: set the <code>o1</code>'s display property to block).</p>
+				<p class="caption">Hint: Check Week 9 slides to refresh on how to get elements and Week 11 slides for
+					the for loop syntax.</p>
+				<p> Repeat this process for the other outfits and replace <code>s1</code> and <code>o1</code> with the
+					respective outfit numbers.</p>
+				<!-- <p>There are <b>two</b> ways to implement the same functionality. One solution is shorter and more elegant than the other, but you can implement Dress Drizzy in whatever way makes sense to you.</p>
+						<p>The <b>first</b> solution is to show the corresponding outfit for every outfit selection. Pay attention to the ids in the HTML. For example, if the user were to click on element "#s1", we would want to show "#o1". Repeat the same steps for "#s2" through "#s5" and "#o2" through "#o5". Afterwards use ".fadeIn()" and ".fadeOut()" to add functionality to the "STRIP ME" button.</p>
+						<p>The <b>second</b> solution is a bit trickier to understand but shortens your code significantly. The idea in this solution is to notice that "s1" and "o1" are correlated, "s2" and "o2" are correlated and so on. So what if there was a way to get the number of the outfit selected and display the corresponding outfit on Drake? Lucky for you, there is a way to do this. (Hint: remember the keyword "this" and look up the documentation for the "slice()" function in JQuery. Use these in order to obtain the number from "outfit-selection".) Once you have the number from the selected outfit, concatenate the string "o" and your number to get the correlated outfit to display.</p>
+						<p>Afterwards use ".fadeIn()" and ".fadeOut()" to add functionality to the "STRIP ME" button.</p> -->
+				<p>We're also going to add functionality to the "STRIP ME" button. Let's first get the
+					<code>#strip-button</code> element. When you click on the <code>#strip-button</code> element, hide
+					all the outfits (Hint: can we call the same function that we made earlier?) Then, show the body.</p>
+
+			</div>
+			<div class="body">
+				<div class="body-header">Design Response</div>
+				<p>Make sure you complete this week's design response about <a
+						href="https://uxdesign.cc/ux-psychology-go-hand-in-hand-introduction-to-human-attention-a70ffd2c4289"><u>this
+							article</u>.</a></p>
+			</div>
+		</div>
+		<div id="submission">
+			<div id="submission-header">Submission</div>
+			<div id="submission-content">
+			  <p>Submit your files to your GitHub Submission Repository by copying all the files from
+				hw10-starter into
+				the hw10 folder of your submission repository (replace the index.html originally in it).
+				In your terminal, from your GitHub Submission Repository, run the following Git commands:
+			  </p>
+			  <ul>
+				<li>git add -A</li>
+				<li>git commit -m 'finished hw10'</li>
+				<li>git push</li>
+			  </ul>
+			  <p>This assignment is due <strong>Thursday, November 28th</strong> at <strong>8:00PM
+				  PST</strong>.</p>
+			</div>
+		  </div>
+	</div>
+
+</body>
+
+</html>
